@@ -7,3 +7,28 @@ div.sticky {
     z-index: 1;
 }
 
+.box1 {
+    border: solid 3px rgb(197, 195, 195); 
+    margin: auto; 
+    margin-top: 50px; 
+    padding: 25px; 
+    max-width: 520px;
+}
+
+.box2 {
+    margin: auto;
+    max-width: 700px;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.caption {
+    margin-top: 0px;
+}
