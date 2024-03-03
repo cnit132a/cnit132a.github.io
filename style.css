@@ -1,1 +1,39 @@
-div.sticky{position: -webkit-sticky;position: sticky;top: 0;font-size: 20px;z-index: 1}.box1{border: solid 3px rgb(197, 195, 195);margin: auto;margin-top: 50px;padding: 25px;max-width: 520px}.box2{margin: auto;max-width: 700px}.responsive{max-width: 100%;height: auto}.center-text{text-align: center}.caption{margin-top: 0px}
+/* Keep Nav Bar fixed top */
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.bg1 {
+    background-image: url("bg1.png");
+    background-color: #cccccc;
+}
+
+.box1 {
+
+    margin: auto;
+    margin-top: 50px;
+    padding: 25px;
+    max-width: 520px;
+}
+
+.box2 {
+    margin: auto;
+    max-width: 700px;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.caption {
+    margin-top: 0px;
+}
