@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="working with flexbox">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hw4 Working with flexbox</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height: auto;
+            font-weight: 800;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        article,
+        div.adapt {
+            padding: 15px 10px;
+        }
+
+        header {
+            display: flex;
+            background-color: orangered;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        aside {
+            padding: 5px;
+        }
+
+        aside.one {
+            background-color: rgb(230, 230, 45);
+            text-align: center;
+        }
+
+        article {
+            background-color: rgb(48, 48, 126);
+            color: rgb(255, 255, 255);
+        }
+
+        div.adapt {
+            background-color: rgb(188, 127, 188);
+            color: rgb(30, 30, 234);
+        }
+
+        aside.two {
+            background-color: rgb(243, 169, 181);
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgb(161, 180, 131);
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M23TRBCL');
+    </script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M23TRBCL" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="flex-container">
+        <header>Name of Company</header>
+        <div class="row">
+            <aside class="col one">This is the aside 1 </aside>
+            <article class="col">This is the article article of my page! This is the main content of the page. In a
+                3-column layout, it should be shown in the middle between the aside 1 and aside 2!
+            </article>
+            <div class="col adapt">This column was created to have some content as a challenge to adapt the old 3-column
+                layout to a 4-column layout</div>
+            <aside class="col two">This is the aside 2</aside>
+        </div>
+        <footer>This is the footer<br>Copyright &copy; 2017</footer>
+    </div>
+    <a href="assignments.html">Back to Hw4</a>
+</body>
+
+</html>
