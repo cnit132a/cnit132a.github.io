@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Great movie titles</title>
+  <meta name="description" content="a list of great movie titles, name of director and trailer">
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: #DEB887;
+      color: #A52A2A;
+    }
+
+    header {
+      width: 60%;
+      background-image: url(banner.png);
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 5px 5px 5px gray;
+      font-size: 1.5rem;
+      color: black;
+    }
+
+    div {
+      width: 80%;
+      margin: 0 auto;
+      border: 2px solid #D2691E;
+      padding: 0 10px;
+    }
+
+    footer {
+      width: 60%;
+      margin: 10px auto;
+      padding: 3px 0;
+      text-align: center;
+      background-color: #A52A2A;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    footer img {
+      float: left;
+      margin: 0 5px 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Great Movies</h1>
+    <h2>Great Directors</h2>
+  </header>
+  <a href="assignments.html">Go back to the main page</a>
+  <article itemscope itemtype="http://schema.org/Movie">
+    <h3 itemprop="name">Avatar</h3>
+    <p><span itemprop="director">Director: James Cameron</span><span itemscope itemtype="http://schema.org/Person"
+        itemprop="birthDate"> (born August 16, 1954)</span></p>
+    <p itemprop="genre">Type: Science fiction</p>
+    <p itemprop="datePublished">Release Date: December 18, 2009</p>
+  </article>
+  <article itemscope itemtype="http://schema.org/Movie">
+    <h3 itemprop="name">Star Wars: Episode VII</h3>
+    <p><span itemprop="director">Director: J. J. Abrams</span><span itemscope itemtype="http://schema.org/Person"
+        itemprop="birthDate"> (born June 27, 1966)</p>
+    <p itemprop="genre">Type: Science fiction</p>
+    <p itemprop="datePublished">Release Date: December 18, 2015</p>
+  </article>
+  <article itemscope itemtype="http://schema.org/Movie">
+    <h3 itemprop="name">Titanic</h3>
+    <p><span itemprop="director"></span>Director: James Cameron </span><span itemscope
+        itemtype="http://schema.org/Person" itemprop="birthDate"> (born August 16, 1954)</p>
+    <p itemprop="genre">Type: Drama</p>
+    <p itemprop="datePublished">Release Date: December 19, 1997</p>
+  </article>
+  <article itemscope itemtype="http://schema.org/Movie">
+    <h3 itemprop="name">Schindler's List</h3>
+    <p><span itemprop="director"></span>Director: Steven Spielberg </span><span itemscope
+        itemtype="http://schema.org/Person" itemprop="birthDate"> (born December 18, 1946)</p>
+    <p itemprop="genre">Type: Drama</p>
+    <p itemprop="datePublished">Release Date: December 15, 1993</p>
+  </article>
+
+  <!-- for reference 
+  <div itemscope itemtype="http://schema.org/LocalBusiness">
+    <h1 itemprop="legalName">City College of San Francisco</h1>
+    <h2 itemprop="address">50 Frida Khalo, San Francisco, CA</h2>
+    <img src="ccsflogo.png" alt="Citttty College logo" itemprop="logo">
+    <p>City College of SF............</p>
+    <p>Here are some of our awarded faculty:</p>
+    <ul itemscope itemtype="http://schema.org/Person">
+      <li><span itemprop="givenName">Claudia</span> <span itemprop="familyName">Da Silva</span></li>
+      <li><span itemprop="givenName">Sam</span> <span itemprop="familyName">Bowne</span></li>
+      <li><span itemprop="givenName">Carmen</span> <span itemprop="familyName">Lamha</span></li>
+    </ul>
+  </div> -->
+
+
+
+
+
+  <footer>
+    <img src="movielogo.png">
+    <p>List made by CNIT 132A class at CCSF</p>
+    <p>Copyright &copy; 2017</p>
+  </footer>
+</body>
+
+</html>
