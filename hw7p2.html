@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shaping content</title>
+    <meta name="description" content="Shaping content around an image">
+    <meta charset="utf-8">
+    <style>
+        body {
+            font: 1em Helvetica, Arial, sans-serif;
+            background-color: #deeff7;
+        }
+
+        .bigContainer {
+            max-width: 700px;
+            margin: 5px auto;
+            font-size: 1em;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .house {
+            float: left;
+            shape-outside: url(house.png);
+            shape-margin: 10px;
+        }
+
+        .smallContainer {
+            container-type: inline-size;
+            container-name: smallContainer;
+        }
+
+        @container smallContainer (max-width: 600px) {
+            h2 {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="bigContainer">
+        <h1>Shaping Content Around Image </h1>
+        <section class="smallContainer">
+            <h2>Shaping around the house</h2>
+            <img class="house" src="house.png" alt="house image">
+            <p>This is a paragraph that will start on the right side of the house shape and the CSS substituted the
+                float of the Image (the hous.png) to use the CSS Shapes properties. This page was modified for that
+                purpose and you will see that these two paragraphs will then follow the shape of that house following
+                any curve, or diagonal line you see instead of just following a rectangular shape of the width and
+                height of the image.</p>
+            <p>This is the start of the second paragraph and this paragraph will also the shape of the house and the
+                second paragraph is here just to show to out that it will follow the house until the shape ends when
+                then the content will align as it is the default of the browser</p>
+            <p>This is the third paragraph and, by now, I am not sure if this paragraph will be written on the right
+                side of the image or the paragraph has been placed below the image starting on the left side of the
+                browser and being normally displayed as any other element of a web page.</p>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flying plane</title>
+  <meta name="description" content="airplane flying with CSS3 animation">
+  <meta charset="utf-8">
+
+  <style>
+    * {
+      background-color: #C0DEED;
+    }
+
+    @keyframes movingClouds {
+      from {
+        background-position: 0% 0%;
+      }
+
+      to {
+        background-position: 187% 0%;
+      }
+    }
+
+    #sky {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      margin: 0px;
+      padding: 0px;
+      background-color: #C0DEED;
+      background: url(clouds.png) center top repeat-x;
+      padding-top: 30px;
+      padding-bottom: 10px;
+      animation-name: movingClouds;
+      animation-duration: 40s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    h1 {
+      color: rgb(242, 241, 245);
+      background-color: transparent;
+      margin-bottom: 150px;
+    }
+
+    @keyframes jumpingBanner {
+      0% {
+        left: 0;
+      }
+
+      50% {
+        left: calc(100% - 220px);
+        transform: rotate(2turn);
+      }
+
+      100% {
+        left: 45%;
+        transform: rotate(2turn);
+        font-size: 2em;
+      }
+    }
+
+    .banner {
+      position: absolute;
+      margin-top: 100px;
+      color: #7e19dd;
+      font-weight: bold;
+      animation: linear;
+      animation-name: jumpingBanner;
+      animation-duration: 10s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+    }
+
+    #toggleAnimationButton {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 9999;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="sky">
+    <h1>Comfortable Airlines</h1>
+    <img src="plane.png" alt="cartoon airplane">
+    <div class="banner">FLY WITH US, WE ARE SAFE</div>
+  </div>
+
+  <button id="toggleAnimationButton">Toggle Animation</button>
+
+  <script>
+    var animationPaused = false;
+    var sky = document.getElementById('sky');
+    var banner = document.querySelector('.banner');
+    var toggleButton = document.getElementById('toggleAnimationButton');
+
+    toggleButton.addEventListener('click', function () {
+      if (animationPaused) {
+        sky.style.animationPlayState = 'running';
+        banner.style.animationPlayState = 'running';
+        animationPaused = false;
+        toggleButton.textContent = 'Pause Animation';
+      } else {
+        sky.style.animationPlayState = 'paused';
+        banner.style.animationPlayState = 'paused';
+        animationPaused = true;
+        toggleButton.textContent = 'Resume Animation';
+      }
+    });
+  </script>
+</body>
+
+</html>
