@@ -14,43 +14,54 @@
         }
 
         section {
-            width: 60%;
+            width: 700px;
             margin: auto;
             container-type: inline-size;
+        }
 
-            .house {
-                float: left;
-                shape-outside: url(house.png);
-                shape-margin: 10px;
-            }
+        .house {
+            float: left;
+            shape-outside: url(house.png);
+            shape-margin: 10px;
+        }
 
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        @container (max-width: 600px) {
             h2 {
-                font-size: 2em;
+                font-size: 1rem;
             }
-
-            
+        }
     </style>
 </head>
 
 <body>
-    <main>
+    <header>
         <h1>Shaping Content Around Image </h1>
-        <section>
-            <h2>Shaping around the house</h2>
-            <img class="house" src="house.png" alt="house image">
-            <p>This is a paragraph that will start on the right side of the house shape and the CSS substituted the
-                float of the Image (the hous.png) to use the CSS Shapes properties. This page was modified for that
-                purpose and you will see that these two paragraphs will then follow the shape of that house following
-                any curve, or diagonal line you see instead of just following a rectangular shape of the width and
-                height of the image.</p>
-            <p>This is the start of the second paragraph and this paragraph will also the shape of the house and the
-                second paragraph is here just to show to out that it will follow the house until the shape ends when
-                then the content will align as it is the default of the browser</p>
-            <p>This is the third paragraph and, by now, I am not sure if this paragraph will be written on the right
-                side of the image or the paragraph has been placed below the image starting on the left side of the
-                browser and being normally displayed as any other element of a web page.</p>
-        </section>
-    </main>
+    </header>
+
+    <section>
+        <h2>Shaping around the house</h2>
+        <img class="house" src="house.png" alt="house image">
+        <p>This is a paragraph that will start on the right side of the house shape and the CSS substituted the
+            float of the Image (the hous.png) to use the CSS Shapes properties. This page was modified for that
+            purpose and you will see that these two paragraphs will then follow the shape of that house following
+            any curve, or diagonal line you see instead of just following a rectangular shape of the width and
+            height of the image.</p>
+        <p>This is the start of the second paragraph and this paragraph will also the shape of the house and the
+            second paragraph is here just to show to out that it will follow the house until the shape ends when
+            then the content will align as it is the default of the browser</p>
+        <p>This is the third paragraph and, by now, I am not sure if this paragraph will be written on the right
+            side of the image or the paragraph has been placed below the image starting on the left side of the
+            browser and being normally displayed as any other element of a web page.</p>
+    </section>
+
 </body>
 
 </html>
