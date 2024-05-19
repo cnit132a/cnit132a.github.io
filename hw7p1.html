@@ -4,8 +4,8 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flying plane</title>
-  <meta name="description" content="airplane flying with CSS3 animation">
+  <title>CSS Animation Flying plane</title>
+  <meta name="description" content="CSS Animations & Transitions, flying with CSS3 animation">
   <meta charset="utf-8">
 
   <style>
@@ -74,7 +74,7 @@
       animation-name: jumpingBanner;
       animation-duration: 10s;
       animation-fill-mode: forwards;
-      animation-iteration-count: infinite;
+      animation-iteration-count: 2;
     }
 
     #toggleAnimationButton {
@@ -91,12 +91,20 @@
       z-index: 9999;
       background-color: transparent;
       text-decoration: none;
-      
+
     }
 
     a:hover {
       text-decoration: underline;
-      
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      #sky,
+      .banner {
+        animation: none;
+      }
     }
   </style>
 
